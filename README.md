@@ -2,40 +2,32 @@
 
 - ## Instalação 
 
-    Todo o desenvolvimento foi feito em servidor local, com auxílio da ferramenta XAMPP, e a instalação vai ser baseada nela.
-
     - ### Clonando o repositório
 
         No primeiro momento, o clone do respositório deve ser feito pelo [link](https://github.com/allanros/generic-wordpress-ecommerce).
 
-        Em seguida, mova os arquivos que estão dentro do diretório (wp-admin, wp-content, etc.) para um novo diretório com o nome de "wordpress" dentro do diretório do XAMPP > htdocs > wordpress (que foi criado).
+    - ### Docker compose
 
-    - ### Banco de dados
+        Em seguida, rode o comando para que seja montada o container do docker:
 
-        Será necessário importar o backup que forneci. Através do PhpMyAdmin fornecido pelo XAMPP, acessando a URL 'localhost/phpmyadmin/', crie um novo banco com o nome de **"wordpress"**. Caso seja criado com outro nome, será necessário mudar no arquivo **"wp-config.php"** na linha em que ele se refere ao banco. Acesse a aba de importação do banco e faça a importação com o arquivo fornecido.
+          docker-compose up
 
-        ```php
-            // ** Configurações do banco de dados - Você pode pegar estas informações com o serviço de hospedagem ** //
-            /** O nome do banco de dados do WordPress */
-            define( 'DB_NAME', 'wordpress' );
+        Após já deve ser possível executar o wordpress no **localhost:8000**.
 
-            /** Usuário do banco de dados MySQL */
-            define( 'DB_USER', 'root' );
-
-            /** Senha do banco de dados MySQL */
-            define( 'DB_PASSWORD', '' );
-
-            /** Nome do host do MySQL */
-            define( 'DB_HOST', 'localhost' );
-
-        ```
-        Nota-se que aí também está presente o nome do usuário e a senha, que posteriormente podem ser alterados também.
-
-    - ### Login
+    - ### Login e testes
         O usuário que cadastrei como administrador foi:
             
-            Nome: allan
-            senha: 123456
+          Nome: allan
+          Senha: 123456
+
+        Para testes criei o seguinte usuário com os dados do PayPal, caso necessário:
+            
+          Nome: allan comprador
+          Senha: Teste.1234
+          -------------------
+          PayPal 
+          Email PayPal: allan.teste@hotmail.com
+          Senha: Teste.123
 
 - ## Processo de construção
 
