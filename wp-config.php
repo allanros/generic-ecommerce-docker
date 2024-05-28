@@ -59,6 +59,8 @@ define( 'SECURE_AUTH_SALT', 'coloque a sua frase única aqui' );
 define( 'LOGGED_IN_SALT',   'coloque a sua frase única aqui' );
 define( 'NONCE_SALT',       'coloque a sua frase única aqui' );
 
+define( 'WP_SMUSH_PARALLEL', false );
+
 /**#@-*/
 
 /**
